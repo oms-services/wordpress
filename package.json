@@ -1,0 +1,13 @@
+{
+  "name": "wordpress-omg",
+  "version": "1.0.0",
+  "description": "Wordpress OMG microservice",
+  "dependencies": {
+    "hapi": "^17.8.1",
+    "wpapi": "^1.1.2"
+  },
+  "devDependencies": {},
+  "author": "Asyncy",
+  "license": "MIT",
+  "private": true
+}

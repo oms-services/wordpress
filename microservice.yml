@@ -1,0 +1,117 @@
+omg: 1
+lifecycle:
+  startup:
+      command: ["node", "/src/App.js"]
+info:
+    version: 0.1.0
+    title: Wordpress
+    description: Allows interaction with the WordPress API
+    license:
+        name: MIT
+        url: https://opensource.org/licenses/MIT
+    contact:
+        name: Asyncy
+        url: https://asyncy.com
+        email: hello@asyncy.com
+actions:
+    posts:
+        help: Find posts
+        http:
+            method: get
+            path: /posts
+            port: 5000
+        arguments:
+            author:
+                help: The id of the author
+                type: number
+                in: query
+                required: false
+            status:
+                help: The status of the post
+                type: string
+                in: query
+                required: false
+            page:
+                help: Pagination parameter
+                type: number
+                in: query
+                required: false
+            per_page:
+                help: Number of posts per page
+                type: number
+                in: query
+                required: false
+    newpost:
+        help: Create a new post
+        http:
+            method: post
+            path: /newpost
+            port: 5000
+        arguments:
+            title:
+                help: The title of the post
+                type: string
+                in: requestBody
+                required: true
+            content:
+                help: The content of the post
+                type: string
+                in: requestBody
+                required: true
+            status:
+                help: The status of the post
+                type: string
+                in: requestBody
+                required: false
+    updatepost:
+        help: Update a post
+        http:
+            method: patch
+            path: /updatepost
+            port: 5000
+        arguments:
+            id:
+                help: The id of the post
+                type: number
+                in: requestBody
+                required: true
+            title:
+                help: The title of the post
+                type: string
+                in: requestBody
+                required: false
+            content:
+                help: The content of the post
+                type: string
+                in: requestBody
+                required: false
+            status:
+                help: The status of the post
+                type: string
+                in: requestBody
+                required: false
+    deletepost:
+        help: Delete a post
+        http:
+            method: delete
+            path: /deletepost
+            port: 5000
+        arguments:
+            id:
+                help: The id of the post
+                type: number
+                in: requestBody
+                required: true
+environment:
+    url:
+        type: string
+        required: true
+        help: The Wordpress website url
+    username:
+        type: string
+        required: true
+        help: WordPress username
+    password:
+        type: string
+        required: true
+        help: WordPress password
