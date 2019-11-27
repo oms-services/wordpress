@@ -1,18 +1,20 @@
 oms: 1
-lifecycle:
-  startup:
-    command: ['node', '/app/src/index.js']
 info:
   version: 0.1.0
   title: Wordpress
   description: Allows interaction with the WordPress API
   license:
     name: MIT
-    url: https://opensource.org/licenses/MIT
+    url: 'https://opensource.org/licenses/MIT'
   contact:
-    name: Asyncy
-    url: https://asyncy.com
-    email: hello@asyncy.com
+    name: Open Microservices
+    url: 'https://openmicroservices.org'
+    email: core@openmicroservices.org
+lifecycle:
+  startup:
+    command:
+      - node
+      - /app/src/index.js
 actions:
   posts:
     help: Find posts
