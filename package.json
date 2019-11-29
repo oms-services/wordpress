@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Open Microservice access to Wordpress",
   "dependencies": {
-    "hapi": "17.8.5",
+    "hapi": "18.1.0",
     "wpapi": "1.2.1"
   },
   "devDependencies": {},
