@@ -4,7 +4,7 @@
   "description": "Open Microservice access to Wordpress",
   "dependencies": {
     "hapi": "18.1.0",
-    "wpapi": "1.2.1"
+    "wpapi": "1.2.2"
   },
   "devDependencies": {},
   "license": "MIT",
